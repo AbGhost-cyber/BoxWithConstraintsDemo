@@ -70,6 +70,7 @@ fun CustomCard(data: CustomData) {
 fun BoxWithConstraintsScope.AdaptiveContent(data: CustomData) {
     val badgeSize = 24.dp
     val padding = 24.dp
+    // minus 1 to reserve space for the badge icon
     val numberOfBadgesToShow = maxWidth.div(badgeSize + padding).toInt().minus(1)
     val remainingBadges = data.badges.size - numberOfBadgesToShow
 
